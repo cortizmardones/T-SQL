@@ -56,6 +56,18 @@ select * from Tramo_Edad;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 --Función para calcular la cantidad de cargas familiares (N°2 en la tabla)
 IF object_id('fc_cantidad_carga') IS NOT NULL
    DROP FUNCTION fc_cantidad_carga;
@@ -106,6 +118,16 @@ select dbo.fc_puntaje_carga2(1);
 
 --Ver la tabla con parametros.
 select * from Tramo_Carga_Familiar;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,6 +229,78 @@ select * from Estado_Civil;
 
 
 
+
+
+
+
+
+use ProyectoServiu;
+
+--Función para que devuelve el pueblooriginario (VARCHAR) por el rut (N°4 en la tabla)
+IF object_id('fc_pueblo_originario') IS NOT NULL
+   DROP FUNCTION fc_pueblo_originario;
+GO
+
+Create function fc_pueblo_originario (@rut int) Returns varchar(50)
+AS
+BEGIN
+
+Declare @pueblo_originario varchar(50)
+
+select @pueblo_originario = po.nombre
+from Postulante as p join Pueblo_Originario as po
+on p.id_pueblo_originario = po.id_pueblo_originario
+where p.rut_postulante = @rut;
+
+ Return @pueblo_originario;
+END;
+GO
+
+
+--Ejecutar la función que devuelve la edad por el rut
+select dbo.fc_pueblo_originario(167746322);
+
+--Ver la tabla con parametros.
+select * from Postulante;
+select * from Pueblo_Originario;
+
+
+
+
+use ProyectoServiu;
+
+--Función para que devuelve el pueblooriginario (VARCHAR) por el rut (N°4 en la tabla)
+IF object_id('fc_pueblo_originarioInt') IS NOT NULL
+   DROP FUNCTION fc_pueblo_originarioInt;
+GO
+
+Create function fc_pueblo_originarioInt (@rut int) Returns int
+AS
+BEGIN
+
+Declare @pueblo_originario int
+
+select @pueblo_originario = po.id_pueblo_originario
+from Postulante as p join Pueblo_Originario as po
+on p.id_pueblo_originario = po.id_pueblo_originario
+where p.rut_postulante = @rut;
+
+ Return @pueblo_originario;
+END;
+GO
+
+
+--Ejecutar la función que devuelve la edad por el rut
+select dbo.fc_pueblo_originarioInt(167746322);
+
+--Ver la tabla con parametros.
+select * from Postulante;
+select * from Pueblo_Originario;
+
+
+
+
+
 --Función para calcular el puntaje por pertenecer a algun pueblo indigena (N°4 en la tabla)
 IF object_id('fc_puntaje_pueblo_originario') IS NOT NULL
    DROP FUNCTION fc_puntaje_pueblo_originario;
@@ -230,6 +324,16 @@ select dbo.fc_puntaje_pueblo_originario(2);
 
 --Ver la tabla con parametros.
 select * from Pueblo_Originario;
+
+
+
+
+
+
+
+
+
+
 
 
 
