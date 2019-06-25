@@ -1,8 +1,35 @@
 
 use ProyectoServiu;
 
+--Función para que devuelva la edad por el rut (N°1 en la tabla)
+IF object_id('fc_edad') IS NOT NULL
+   DROP FUNCTION fc_edad;
+GO
 
---Función para calcular la edad (N°1 en la tabla)
+Create function fc_edad (@rut int) Returns int
+AS
+BEGIN
+
+select @rut=edad
+from Postulante
+where rut_postulante = @rut;
+
+ Return @rut;
+END;
+GO
+
+--Ejecutar la función que devuelve la edad por el rut
+select dbo.fc_edad(134567891);
+
+--Ver la tabla con parametros.
+select * from Tramo_Edad;
+
+select * from Postulante;
+
+
+
+
+--Función para calcular el puntaje por la edad (N°1 en la tabla)
 IF object_id('fc_puntaje_edad') IS NOT NULL
    DROP FUNCTION fc_puntaje_edad;
 GO
@@ -79,6 +106,74 @@ select dbo.fc_puntaje_carga2(1);
 
 --Ver la tabla con parametros.
 select * from Tramo_Carga_Familiar;
+
+
+
+
+
+use ProyectoServiu;
+
+--Función para que devuelve el estado civil (VARCHAR) por el rut (N°3 en la tabla)
+IF object_id('fc_estado_civil') IS NOT NULL
+   DROP FUNCTION fc_estado_civil;
+GO
+
+Create function fc_estado_civil (@rut int) Returns varchar(50)
+AS
+BEGIN
+
+Declare @estado_civil varchar(50)
+
+select @estado_civil = e.nombre_estado_civil
+from Postulante as p join estado_civil as e
+on p.id_estado_civil = e.id_estado_civil
+where p.rut_postulante = @rut;
+
+ Return @estado_civil;
+END;
+GO
+
+
+--Ejecutar la función que devuelve la edad por el rut
+select dbo.fc_estado_civil(167746322);
+
+--Ver la tabla con parametros.
+select * from Postulante;
+select * from estado_civil;
+
+
+
+
+
+use ProyectoServiu;
+
+--Función para que devuelve el estado civil (VARCHAR) por el rut (N°3 en la tabla)
+IF object_id('fc_estado_civilInt') IS NOT NULL
+   DROP FUNCTION fc_estado_civilInt;
+GO
+
+Create function fc_estado_civilInt (@rut int) Returns varchar(50)
+AS
+BEGIN
+
+Declare @estado_civil varchar(50)
+
+select @estado_civil = e.id_estado_civil
+from Postulante as p join estado_civil as e
+on p.id_estado_civil = e.id_estado_civil
+where p.rut_postulante = @rut;
+
+ Return @estado_civil;
+END;
+GO
+
+
+--Ejecutar la función que devuelve la edad por el rut
+select dbo.fc_estado_civilInt(167746322);
+
+--Ver la tabla con parametros.
+select * from Postulante;
+select * from estado_civil;
 
 
 
