@@ -233,7 +233,7 @@ IF OBJECT_ID ('sp_serviu2') IS NOT NULL
 	DROP PROCEDURE sp_serviu2;
 GO
 
-CREATE PROCEDURE sp_serviu2 @año int, @rutIngresado int , @montoAhorroParametro int , @tituloParametro int
+CREATE PROCEDURE sp_serviu2 @año int, @rutIngresado int, @tituloParametro int
 AS
 BEGIN
 
@@ -241,8 +241,9 @@ Declare
 @edad int , @puntajeEdad int , 
 @cantidad_cargas int , @puntajeCargas int , 
 @estado_civilVarchar varchar(50), @estado_civilInt int ,@puntaje_estado_civil int ,
-@pueblo_indigena varchar(50), @pueblo_indigenaInt int , @puntaje_pueblo_indigena int , 
-@puntaje_monto_ahorro int , @puntaje_titulo int , @total_puntaje int
+@pueblo_indigena varchar(50), @pueblo_indigenaInt int , @puntaje_pueblo_indigena int,
+@monto int, @puntaje_monto_ahorro int, 
+@puntaje_titulo int , @total_puntaje int
  
 set @Edad   = dbo.fc_edad(@rutIngresado);
 set @puntajeEdad   = dbo.fc_puntaje_edad(@Edad);
@@ -258,17 +259,19 @@ set @pueblo_indigena = dbo.fc_pueblo_originario(@rutIngresado);
 set @pueblo_indigenaInt = dbo.fc_pueblo_originarioInt(@rutIngresado);
 set @puntaje_pueblo_indigena = dbo.fc_puntaje_pueblo_originario(@pueblo_indigenaInt);
 
-set @puntaje_monto_ahorro = dbo.fc_puntaje_monto_ahorro(@montoAhorroParametro);
+set @monto = dbo.fc_monto_ahorro(@rutIngresado);
+set @puntaje_monto_ahorro = dbo.fc_puntaje_monto_ahorro(@monto);
+
 set @puntaje_titulo = dbo.fc_puntaje_tipo_titulo(@tituloParametro);
 set @total_puntaje = SUM(@puntajeEdad + @puntajeCargas + @puntaje_estado_civil + @puntaje_pueblo_indigena + @puntaje_monto_ahorro + @puntaje_titulo );
 
-insert into proceso (ano,rut_postulante,edad,puntaje_edad,cantidad_cargas,puntaje_carga,estado_civil,puntaje_estado_civil,pueblo_indigena,puntaje_pueblo_indigena,puntaje_monto_ahorro,puntaje_titulo,total_puntaje)
-values (@año,@rutIngresado,@Edad,@puntajeEdad,@cantidad_cargas,@puntajeCargas,@estado_civilVarchar,@puntaje_estado_civil,@pueblo_indigena,@puntaje_pueblo_indigena,@puntaje_monto_ahorro,@puntaje_titulo,@total_puntaje);
+insert into proceso (ano,rut_postulante,edad,puntaje_edad,cantidad_cargas,puntaje_carga,estado_civil,puntaje_estado_civil,pueblo_indigena,puntaje_pueblo_indigena,monto_ahorro,puntaje_monto_ahorro,puntaje_titulo,total_puntaje)
+values(@año,@rutIngresado,@Edad,@puntajeEdad,@cantidad_cargas,@puntajeCargas,@estado_civilVarchar,@puntaje_estado_civil,@pueblo_indigena,@puntaje_pueblo_indigena,@monto,@puntaje_monto_ahorro,@puntaje_titulo,@total_puntaje);
 END;
 
 
 --Ejecutar storeprocedure y consultar
-EXEC sp_serviu2 2019,12345,8001001,2;
+EXEC sp_serviu2 2019,169199958,2;
 GO
 select * from Proceso;
 

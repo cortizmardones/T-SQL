@@ -337,6 +337,38 @@ select * from Pueblo_Originario;
 
 
 
+--Función para calcular el monto ahorrado (N°5 en la tabla)
+IF object_id('fc_monto_ahorro') IS NOT NULL
+   DROP FUNCTION fc_monto_ahorro;
+GO
+
+Create function fc_monto_ahorro (@rut int) Returns int
+AS
+BEGIN
+
+select @rut = c.cantidad
+from Cuenta as c join Postulante as p
+on p.id_cuenta = c.id_cuenta
+where rut_postulante = @rut;
+
+
+ Return @rut;
+END;
+GO
+
+
+--Ejecutar la función que calcula el monto ahorrado por rut 
+select dbo.fc_monto_ahorro(222872707);
+
+--Ver la tabla con parametros.
+select * from Cuenta; --(campo cantidad)
+select * from Postulante;
+
+
+
+
+
+
 
 
 
@@ -352,7 +384,7 @@ BEGIN
 select @id_puntaje_monto_ahorro=puntaje
 from Tramo_Ahorro
 where @id_puntaje_monto_ahorro between minimo and maximo;
-;
+
 
  Return @id_puntaje_monto_ahorro;
 END;
@@ -360,12 +392,35 @@ GO
 
 
 --Ejecutar la función que calcula el puntaje por portenecer el tipo de titulo (Ojo que es por NUMERO no por la palabra ejemplo  = profesional)
-select dbo.fc_puntaje_monto_ahorro(8001001);
+select dbo.fc_puntaje_monto_ahorro(8799123);
 
 --Ver la tabla con parametros.
 select * from Cuenta; --(campo cantidad)
 
 select * from Tramo_Ahorro;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
