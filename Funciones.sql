@@ -402,10 +402,38 @@ select * from Tramo_Ahorro;
 
 
 
+--Función para traer el tipo de titulo por el rut (N°6 en la tabla)
+IF object_id('fc_tipo_titulo') IS NOT NULL
+   DROP FUNCTION fc_tipo_titulo;
+GO
+
+Create function fc_tipo_titulo (@rut int) Returns int
+AS
+BEGIN
+
+select @rut = t.id_tipo_titulo
+from postulante as p join Titulo as t
+on p.id_titulo = t.id_titulo
+where p.rut_postulante = @rut ;
 
 
+ Return @rut;
+END;
+GO
 
 
+--Ejecutar la función que trae el tipo de titulo por rut.
+select dbo.fc_tipo_titulo(171302838);
+
+--Ver la tabla con parametros.
+select * from tipo_titulo;
+select * from dbo.Titulo;
+select * from Postulante;
+
+
+select p.rut_postulante ,p.primer_nombre, t.id_tipo_titulo
+from postulante as p join Titulo as t
+on p.id_titulo = t.id_titulo;
 
 
 
@@ -447,7 +475,7 @@ GO
 
 
 --Ejecutar la función que calcula el puntaje por portenecer el tipo de titulo (Ojo que es por NUMERO no por la palabra ejemplo  = profesional)
-select dbo.fc_puntaje_tipo_titulo(3);
+select dbo.fc_puntaje_tipo_titulo(1);
 
 --Ver la tabla con parametros.
 select * from tipo_titulo;

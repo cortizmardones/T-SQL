@@ -233,7 +233,7 @@ IF OBJECT_ID ('sp_serviu2') IS NOT NULL
 	DROP PROCEDURE sp_serviu2;
 GO
 
-CREATE PROCEDURE sp_serviu2 @año int, @rutIngresado int, @tituloParametro int
+CREATE PROCEDURE sp_serviu2 @año int, @rutIngresado int
 AS
 BEGIN
 
@@ -242,8 +242,9 @@ Declare
 @cantidad_cargas int , @puntajeCargas int , 
 @estado_civilVarchar varchar(50), @estado_civilInt int ,@puntaje_estado_civil int ,
 @pueblo_indigena varchar(50), @pueblo_indigenaInt int , @puntaje_pueblo_indigena int,
-@monto int, @puntaje_monto_ahorro int, 
-@puntaje_titulo int , @total_puntaje int
+@monto int, @puntaje_monto_ahorro int,
+@tipo_titulo int , @puntaje_titulo int,
+@total_puntaje int
  
 set @Edad   = dbo.fc_edad(@rutIngresado);
 set @puntajeEdad   = dbo.fc_puntaje_edad(@Edad);
@@ -262,7 +263,9 @@ set @puntaje_pueblo_indigena = dbo.fc_puntaje_pueblo_originario(@pueblo_indigena
 set @monto = dbo.fc_monto_ahorro(@rutIngresado);
 set @puntaje_monto_ahorro = dbo.fc_puntaje_monto_ahorro(@monto);
 
-set @puntaje_titulo = dbo.fc_puntaje_tipo_titulo(@tituloParametro);
+set @tipo_titulo = dbo.fc_tipo_titulo(@rutIngresado);
+set @puntaje_titulo = dbo.fc_puntaje_tipo_titulo(@tipo_titulo);
+
 set @total_puntaje = SUM(@puntajeEdad + @puntajeCargas + @puntaje_estado_civil + @puntaje_pueblo_indigena + @puntaje_monto_ahorro + @puntaje_titulo );
 
 insert into proceso (ano,rut_postulante,edad,puntaje_edad,cantidad_cargas,puntaje_carga,estado_civil,puntaje_estado_civil,pueblo_indigena,puntaje_pueblo_indigena,monto_ahorro,puntaje_monto_ahorro,puntaje_titulo,total_puntaje)
@@ -271,7 +274,7 @@ END;
 
 
 --Ejecutar storeprocedure y consultar
-EXEC sp_serviu2 2019,169199958,2;
+EXEC sp_serviu2 2019,134567891;
 GO
 select * from Proceso;
 
