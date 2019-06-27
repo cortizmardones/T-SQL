@@ -286,7 +286,7 @@ go
 truncate table Proceso;
 
 
-select * from postulante;
+select * from postulante order by created_at;
 select * from estado_civil;
 select * from Pueblo_Originario;
 select * from titulo;
