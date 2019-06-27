@@ -274,7 +274,7 @@ END;
 
 
 --Ejecutar storeprocedure y consultar
-EXEC sp_serviu2 2019,134567891;
+EXEC sp_serviu2 2019,169199957;
 GO
 select * from Proceso;
 
@@ -286,7 +286,12 @@ go
 truncate table Proceso;
 
 
+select * from postulante order by rut_postulante;
 select * from postulante order by created_at;
+select * from cuenta order by id_cuenta;
+
 select * from estado_civil;
 select * from Pueblo_Originario;
 select * from titulo;
+select * from error;
+
