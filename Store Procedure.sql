@@ -274,7 +274,7 @@ END;
 
 
 --Ejecutar storeprocedure y consultar
-EXEC sp_serviu2 2019,169199957;
+EXEC sp_serviu2 2019,171302838;
 GO
 select * from Proceso;
 
@@ -290,8 +290,68 @@ select * from postulante order by rut_postulante;
 select * from postulante order by created_at;
 select * from cuenta order by id_cuenta;
 
-select * from estado_civil;
-select * from Pueblo_Originario;
-select * from titulo;
-select * from error;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Procedimiento con cursores.
+USE ProyectoServiu;
+GO
+IF OBJECT_ID ('sp_serviu3') IS NOT NULL
+	DROP PROCEDURE sp_serviu3;
+GO
+create procedure sp_serviu3
+as
+
+declare @id varchar(250) , @error varchar(250)
+--@edad int , @puntajeEdad int , 
+--@cantidad_cargas int , @puntajeCargas int , 
+--@estado_civilVarchar varchar(50), @estado_civilInt int ,@puntaje_estado_civil int ,
+--@pueblo_indigena varchar(50), @pueblo_indigenaInt int , @puntaje_pueblo_indigena int,
+--@monto int, @puntaje_monto_ahorro int,
+--@tipo_titulo int , @puntaje_titulo int,
+--@total_puntaje int
+
+declare MICURSOR cursor
+	for select * from error
+
+open MICURSOR
+fetch MICURSOR into @id,@error
+print 'id    error'
+print '------------'
+while @@FETCH_STATUS=0
+begin
+	print @id+space(5)+@error
+
+	fetch MICURSOR into @id,@error
+end
+
+close MICURSOR
+deallocate MICURSOR;
+
+
+--Ejecutar storeprocedure y consultar
+EXEC sp_serviu3
 
