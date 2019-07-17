@@ -188,7 +188,7 @@ deallocate MICURSOR;
 --Ejecutar storeprocedure y consultar
 EXEC sp_serviu3;
 GO
-select * from Proceso;
+select * from Proceso order by total_puntaje desc;
 
 
 
