@@ -372,3 +372,10 @@ select * from Tramo_Ahorro;
 insert into Tramo_Ahorro values(1,10000000,99000000,500);
 insert into Tramo_Ahorro values(2,9000000,9999999,400);
 insert into Tramo_Ahorro values(3,8000000,8999999,200);
+
+
+select * from error;
+
+insert into error values(1,'El Rut ingresado ya existe en la BDD');
+insert into error values(2,'La cuenta bancaria ya existe en la BDD');
+insert into error values(3,'El rut consultado no se encuentra en la BDD');

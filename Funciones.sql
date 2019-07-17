@@ -19,7 +19,7 @@ END;
 GO
 
 --Ejecutar la función que devuelve la edad por el rut
-select dbo.fc_edad(134567891);
+select dbo.fc_edad(123456789);
 
 --Ver la tabla con parametros.
 select * from Tramo_Edad;
