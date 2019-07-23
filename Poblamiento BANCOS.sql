@@ -177,11 +177,11 @@ insert into dbo.Conyuge values (208334721,'Venancio','Castro','Soto','20001001',
 
 go
 
-insert into Carga values (240224932,'Esteban','Paredes','Gonzales','20190322');
-insert into Carga values (265803175,'Ricardo','Milos','Ugarte','20190512');
-insert into Carga values (206683183,'Maria','Estanford','Maluenda','20150712');
-insert into Carga values (208956723,'Isabel','Mardones','Picaporte','20150902');
-insert into Carga values (192239378,'Diego','Llanquin','Astroza','20131101');
+insert into Carga values (240224932,'Esteban','Paredes','Gonzales','20190322','2019-07-23','2019-07-23');
+insert into Carga values (265803175,'Ricardo','Milos','Ugarte','20190512','2019-07-23','2019-07-23');
+insert into Carga values (206683183,'Maria','Estanford','Maluenda','20150712','2019-07-23','2019-07-23');
+insert into Carga values (208956723,'Isabel','Mardones','Picaporte','20150902','2019-07-23','2019-07-23');
+insert into Carga values (192239378,'Diego','Llanquin','Astroza','20131101','2019-07-23','2019-07-23');
 
 go
 
@@ -246,11 +246,11 @@ insert into Postulante_Conyuge values (222872707,208334721,'20190501',1,5);
 
 go
 
-insert into Postulante_Carga values (167746322,192239378,'20190401',1,1);
-insert into Postulante_Carga values (155106514,206683183,'20190415',1,2);
-insert into Postulante_Carga values (171302838,208956723,'20190522',1,3);
-insert into Postulante_Carga values (94737419,240224932,'20190413',1,4);
-insert into Postulante_Carga values (222872707,265803175,'20190501',1,1);
+insert into Postulante_Carga values (167746322,192239378,1,1,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (155106514,206683183,1,2,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (171302838,208956723,1,3,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (94737419,240224932,1,4,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (222872707,265803175,1,1,'2019-07-23','2019-07-23');
 
 go
 
