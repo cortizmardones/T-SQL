@@ -270,11 +270,11 @@ insert into Formulario_A values (8085,'20190501','Ernesto Perez',222872707,5);
 
 go
 
-insert into Postulante values (167746322,'Jose','Miguel','Viñuela','Moreno',2557036,91234567,91234567,0140000,'walter.white@gmail.com','19850701',1,2,102871,1,1350000,8,2,1);
-insert into Postulante values (155106514,'Romina','Alejandra','Jara','Romero',2557127,92569871,920897451,8320000,'romina.jara@gmail.com','19911121',2,5,167284,2,1750000,2,5,2);
-insert into Postulante values (171302838,'Francisco','Orlando','Bernales','Ortiz',26567762,982634572,983266942,8320000,'francisco.bernales@gmail.com','19850701',1,4,221476,3,2100000,2,1,1);
-insert into Postulante values (94737419,'Nicole','Andrea','Mardones','Quilodran',26567763,982547612,921456172,2340000,'nicole.mardones@gmail.com','19911121',2,3,327195,4,1999000,2,4,1);
-insert into Postulante values (222872707,'Claudio','Andres','Sandoval','Matus',26567766,963415782,993628876,4030000,'claudio.sandoval@gmail.com','19850701',1,1,897726,5,1192540,4,6,1);
+insert into Postulante values (167746322,'Jose','Miguel','Viñuela','Moreno',2557036,91234567,91234567,0140000,'walter.white@gmail.com','19850701',1,2,102871,1,1350000,8,2,1,'2019-07-23','2019-07-23');
+insert into Postulante values (155106514,'Romina','Alejandra','Jara','Romero',2557127,92569871,920897451,8320000,'romina.jara@gmail.com','19911121',2,5,167284,2,1750000,2,5,2,'2019-07-23','2019-07-23');
+insert into Postulante values (171302838,'Francisco','Orlando','Bernales','Ortiz',26567762,982634572,983266942,8320000,'francisco.bernales@gmail.com','19850701',1,4,221476,3,2100000,2,1,1,'2019-07-23','2019-07-23');
+insert into Postulante values (94737419,'Nicole','Andrea','Mardones','Quilodran',26567763,982547612,921456172,2340000,'nicole.mardones@gmail.com','19911121',2,3,327195,4,1999000,2,4,1,'2019-07-23','2019-07-23');
+insert into Postulante values (222872707,'Claudio','Andres','Sandoval','Matus',26567766,963415782,993628876,4030000,'claudio.sandoval@gmail.com','19850701',1,1,897726,5,1192540,4,6,1,'2019-07-23','2019-07-23');
 
 
 --Mantenedores de puntajes
