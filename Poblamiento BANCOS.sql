@@ -1,6 +1,6 @@
 Use ProyectoServiu;
 
-select * from Banco;
+go
 
 insert into dbo.Banco values (1,'Banco Estado');
 insert into dbo.Banco values (2,'Banco Chile');
@@ -13,14 +13,13 @@ insert into dbo.Banco values (8,'Banco Security');
 insert into dbo.Banco values (9,'Banco Bice');
 insert into dbo.Banco values (10,'Banco Penta');
 
-
-select * from Nacionalidad;
+go
 
 insert into dbo.Nacionalidad values (1,'Chileno');
 insert into dbo.Nacionalidad values (2,'Extranjero');
 insert into dbo.Nacionalidad values (3,'NN');
 
-select * from dbo.UF;
+go
 
 insert into dbo.UF values (1,27592,'11-05-2019');
 insert into dbo.UF values (2,27600,'12-05-2019');
@@ -33,7 +32,7 @@ insert into dbo.UF values (8,27678,'18-05-2019');
 insert into dbo.UF values (9,27700,'19-05-2019');
 insert into dbo.UF values (10,27705,'20-05-2019');
 
-select * from Region;
+go
 
 insert into dbo.Region values (1,'Tarapaca');
 insert into dbo.Region values (2,'Antofagasta');
@@ -52,90 +51,73 @@ insert into dbo.Region values (14,'De los Rios')
 insert into dbo.Region values (15,'Arica y Parinacota')
 insert into dbo.Region values (16,'Ñuble')
 
-select * from dbo.Region;
-select * from dbo.Comuna;
+go
 
-insert into dbo.Comuna values (23,'Alto Hospicio',1);
-insert into dbo.Comuna values (24,'Iquique',1);
-insert into dbo.Comuna values (25,'Colchane',1);
-
-insert into dbo.Comuna values (7,'TalTal',2);
-insert into dbo.Comuna values (8,'Calama',2);
-insert into dbo.Comuna values (9,'Ollague',2);
-insert into dbo.Comuna values (10,'San Pedro de atacama',2);
-
-insert into dbo.Comuna values (26,'Diego de almagro',3);
-insert into dbo.Comuna values (27,'Caldera',3);
-insert into dbo.Comuna values (28,'Tierra Amarilla',3);
-
+insert into dbo.Comuna values (1,'Alto Hospicio',1);
+insert into dbo.Comuna values (2,'Iquique',1);
+insert into dbo.Comuna values (3,'Colchane',1);
+insert into dbo.Comuna values (4,'TalTal',2);
+insert into dbo.Comuna values (5,'Calama',2);
+insert into dbo.Comuna values (6,'Ollague',2);
+insert into dbo.Comuna values (7,'San Pedro de atacama',2);
+insert into dbo.Comuna values (8,'Diego de almagro',3);
+insert into dbo.Comuna values (9,'Caldera',3);
+insert into dbo.Comuna values (10,'Tierra Amarilla',3);
 insert into dbo.Comuna values (11,'Andacollo',4);
 insert into dbo.Comuna values (12,'Ovalle',4);
 insert into dbo.Comuna values (13,'MontePatria',4);
-
 insert into dbo.Comuna values (14,'Quintero',5);
 insert into dbo.Comuna values (15,'Puchuncavi',5);
 insert into dbo.Comuna values (16,'Juan Fernandez',5);
+insert into dbo.Comuna values (17,'Colchagua',6);
+insert into dbo.Comuna values (18,'Cachapoal',6);
+insert into dbo.Comuna values (19,'Cardenal Caro',6);
+insert into dbo.Comuna values (20,'Curepto',7);
+insert into dbo.Comuna values (21,'Pelarco',7);
+insert into dbo.Comuna values (22,'San Clemente',7);
+insert into dbo.Comuna values (23,'Coronel',8);
+insert into dbo.Comuna values (23,'Tome',8);
+insert into dbo.Comuna values (25,'Talcahuano',8);
+insert into dbo.Comuna values (26,'Angol',9);
+insert into dbo.Comuna values (27,'Collipulli',9);
+insert into dbo.Comuna values (28,'Curacautin',9);
+insert into dbo.Comuna values (29,'Puerto Varas',10);
+insert into dbo.Comuna values (30,'Osorno',10);
+insert into dbo.Comuna values (31,'Purranque',10);
+insert into dbo.Comuna values (32,'Chile Chico',11);
+insert into dbo.Comuna values (33,'Lago Verde',11);
+insert into dbo.Comuna values (34,'Tortel',11);
+insert into dbo.Comuna values (35,'Laguna Blanca',12);
+insert into dbo.Comuna values (36,'Punta Arenas',12);
+insert into dbo.Comuna values (37,'Rio Verde',12);
+insert into dbo.Comuna values (38,'Santiago',13);
+insert into dbo.Comuna values (39,'San Bernardo',13);
+insert into dbo.Comuna values (40,'Puente Alto',13);
+insert into dbo.Comuna values (41,'Nuñoa',13);
+insert into dbo.Comuna values (42,'Santiago',13);
+insert into dbo.Comuna values (43,'Providencia',13);
+insert into dbo.Comuna values (44,'Maipu',13);
+insert into dbo.Comuna values (45,'Macul',13);
+insert into dbo.Comuna values (46,'Las Condes',13);
+insert into dbo.Comuna values (47,'Vitacura',13);
+insert into dbo.Comuna values (48,'La Pintana',13);
+insert into dbo.Comuna values (49,'La Florida',13);
+insert into dbo.Comuna values (50,'Renca',13);
+insert into dbo.Comuna values (51,'Lo Prado',13);
+insert into dbo.Comuna values (52,'Conchali',13);
+insert into dbo.Comuna values (53,'Quilicura',13);
+insert into dbo.Comuna values (54,'Quinta Normal',13);
+insert into dbo.Comuna values (55,'Lo Espejo',13);
+insert into dbo.Comuna values (56,'Estacion Central',13);
+insert into dbo.Comuna values (57,'El Bosque',13);
+insert into dbo.Comuna values (58,'Valdivia',14);
+insert into dbo.Comuna values (59,'La union',14);
+insert into dbo.Comuna values (60,'Lago Ranco',14);
+insert into dbo.Comuna values (61,'Arica',15);
+insert into dbo.Comuna values (62,'Putre',15);
+insert into dbo.Comuna values (63,'Camarones',15);
 
-insert into dbo.Comuna values (29,'Colchagua',6);
-insert into dbo.Comuna values (30,'Cachapoal',6);
-insert into dbo.Comuna values (31,'Cardenal Caro',6);
-
-insert into dbo.Comuna values (32,'Curepto',7);
-insert into dbo.Comuna values (33,'Pelarco',7);
-insert into dbo.Comuna values (34,'San Clemente',7);
-
-insert into dbo.Comuna values (20,'Coronel',8);
-insert into dbo.Comuna values (21,'Tome',8);
-insert into dbo.Comuna values (22,'Talcahuano',8);
-
-insert into dbo.Comuna values (17,'Angol',9);
-insert into dbo.Comuna values (18,'Collipulli',9);
-insert into dbo.Comuna values (19,'Curacautin',9);
-
-insert into dbo.Comuna values (35,'Puerto Varas',10);
-insert into dbo.Comuna values (36,'Osorno',10);
-insert into dbo.Comuna values (37,'Purranque',10);
-
-insert into dbo.Comuna values (38,'Chile Chico',11);
-insert into dbo.Comuna values (39,'Lago Verde',11);
-insert into dbo.Comuna values (40,'Tortel',11);
-
-insert into dbo.Comuna values (41,'Laguna Blanca',12);
-insert into dbo.Comuna values (42,'Punta Arenas',12);
-insert into dbo.Comuna values (43,'Rio Verde',12);
-
-insert into dbo.Comuna values (1,'Santiago',13);
-insert into dbo.Comuna values (2,'San Bernardo',13);
-insert into dbo.Comuna values (3,'Puente Alto',13);
-insert into dbo.Comuna values (47,'Nuñoa',13);
-insert into dbo.Comuna values (48,'Santiago',13);
-insert into dbo.Comuna values (49,'Providencia',13);
-insert into dbo.Comuna values (50,'Maipu',13);
-insert into dbo.Comuna values (51,'Macul',13);
-insert into dbo.Comuna values (52,'Las Condes',13);
-insert into dbo.Comuna values (53,'Vitacura',13);
-insert into dbo.Comuna values (54,'La Pintana',13);
-insert into dbo.Comuna values (55,'La Florida',13);
-insert into dbo.Comuna values (56,'Renca',13);
-insert into dbo.Comuna values (57,'Lo Prado',13);
-insert into dbo.Comuna values (58,'Conchali',13);
-insert into dbo.Comuna values (59,'Quilicura',13);
-insert into dbo.Comuna values (60,'Quinta Normal',13);
-insert into dbo.Comuna values (61,'Lo Espejo',13);
-insert into dbo.Comuna values (62,'Estacion Central',13);
-insert into dbo.Comuna values (63,'El Bosque',13);
-
-
-insert into dbo.Comuna values (44,'Valdivia',14);
-insert into dbo.Comuna values (45,'La union',14);
-insert into dbo.Comuna values (46,'Lago Ranco',14);
-
-insert into dbo.Comuna values (4,'Arica',15);
-insert into dbo.Comuna values (5,'Putre',15);
-insert into dbo.Comuna values (6,'Camarones',15);
-
-
-select * from dbo.Propietario;
+go
 
 insert into dbo.Propietario values (169199957,'Carlos','Ortiz','Mardones',958586705,'cortizmardones@gmail.com');
 insert into dbo.Propietario values (184997142,'Ricardo','Soto','Gomez',995875633,'gomez.soto.ricardo@gmail.com');
@@ -143,22 +125,19 @@ insert into dbo.Propietario values (163002957,'Gloria','Mora','Crema',992243213,
 insert into dbo.Propietario values (219684886,'Javier','Santaolalla','Marin',925817396,'javier_santamarin@gmail.com');
 insert into dbo.Propietario values (178569465,'Mercedes','Sosa','Romero',982574891,'mer_romero_sosa@gmail.com');
 
-
-select * from dbo.Tramo_vivienda;
+go
 
 insert into dbo.Tramo_vivienda values (1,'1800');
 insert into dbo.Tramo_vivienda values (2,'2400');
 insert into dbo.Tramo_vivienda values (3,'2800');
 
-
-select * from dbo.Tipo_Cuenta;
+go
 
 insert into dbo.Tipo_Cuenta values (1,'Cuenta Corriente');
 insert into dbo.Tipo_Cuenta values (2,'Cuenta Vista');
 insert into dbo.Tipo_Cuenta values (3,'Cuenta Ahorro');
 
-
-select * from dbo.Pueblo_Originario; --Cree la tabla como identy)
+go
 
 insert into dbo.Pueblo_Originario values ('No pertenece',0,0);
 insert into dbo.Pueblo_Originario values ('Aymara',1,500);
