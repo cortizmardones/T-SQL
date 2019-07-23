@@ -325,5 +325,6 @@ go
 insert into error values(1,'El Rut ingresado ya existe en la BDD');
 insert into error values(2,'La cuenta bancaria ya existe en la BDD');
 insert into error values(3,'El rut consultado no se encuentra en la BDD');
+insert into error values(4,'El rut de la carga familiar ya ha sido ingresado');
 
 --SCRIPT BIEN HECHO , RESPETANDO INTEGRIDAD REFERENCIAL A LA HORA DE SER CARGADO (32 TABLAS HASTA EL MOMENTO)

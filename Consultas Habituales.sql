@@ -18,3 +18,5 @@ select * from Postulante_Carga;
 
 select * from Carga;
 
+select * from error;
+
