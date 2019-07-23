@@ -21,19 +21,6 @@ insert into dbo.Nacionalidad values (3,'NN');
 
 go
 
-insert into dbo.UF values (1,27592,'11-05-2019');
-insert into dbo.UF values (2,27600,'12-05-2019');
-insert into dbo.UF values (3,27603,'13-05-2019');
-insert into dbo.UF values (4,27604,'14-05-2019');
-insert into dbo.UF values (5,27660,'15-05-2019');
-insert into dbo.UF values (6,27670,'16-05-2019');
-insert into dbo.UF values (7,27675,'17-05-2019');
-insert into dbo.UF values (8,27678,'18-05-2019');
-insert into dbo.UF values (9,27700,'19-05-2019');
-insert into dbo.UF values (10,27705,'20-05-2019');
-
-go
-
 insert into dbo.Region values (1,'Tarapaca');
 insert into dbo.Region values (2,'Antofagasta');
 insert into dbo.Region values (3,'Atacama');
@@ -153,7 +140,6 @@ insert into dbo.Pueblo_Originario values ('Picunche',1,500);
 insert into dbo.Pueblo_Originario values ('Cunco',1,500);
 insert into dbo.Pueblo_Originario values ('Chono',1,500);
 
-
 go --select * from Certificado_permanencia; --Cree la tabla con identy
 
 insert into Certificado_permanencia values ('Sin certificado',0);
@@ -174,7 +160,6 @@ insert into dbo.Conyuge values (117236125,'German','Torres','Carrasco','19850410
 insert into dbo.Conyuge values (105432881,'Carla','Mardones','Quilodran','19550508',2);
 insert into dbo.Conyuge values (208334721,'Venancio','Castro','Soto','20001001',1);
 
-
 go
 
 insert into Carga values (240224932,'Esteban','Paredes','Gonzales','20190322','2019-07-23','2019-07-23');
@@ -182,6 +167,19 @@ insert into Carga values (265803175,'Ricardo','Milos','Ugarte','20190512','2019-
 insert into Carga values (206683183,'Maria','Estanford','Maluenda','20150712','2019-07-23','2019-07-23');
 insert into Carga values (208956723,'Isabel','Mardones','Picaporte','20150902','2019-07-23','2019-07-23');
 insert into Carga values (192239378,'Diego','Llanquin','Astroza','20131101','2019-07-23','2019-07-23');
+
+go
+
+insert into dbo.UF values (1,27592,'11-05-2019');
+insert into dbo.UF values (2,27600,'12-05-2019');
+insert into dbo.UF values (3,27603,'13-05-2019');
+insert into dbo.UF values (4,27604,'14-05-2019');
+insert into dbo.UF values (5,27660,'15-05-2019');
+insert into dbo.UF values (6,27670,'16-05-2019');
+insert into dbo.UF values (7,27675,'17-05-2019');
+insert into dbo.UF values (8,27678,'18-05-2019');
+insert into dbo.UF values (9,27700,'19-05-2019');
+insert into dbo.UF values (10,27705,'20-05-2019');
 
 go
 
@@ -209,19 +207,19 @@ insert into dbo.Deposito values (5,233000);
 
 go
 
-insert into dbo.Deposito_Cuenta values (1,221476,1,'20180801');
-insert into dbo.Deposito_Cuenta values (2,327195,2,'20181019');
-insert into dbo.Deposito_Cuenta values (3,167284,3,'20170315');
-insert into dbo.Deposito_Cuenta values (4,102871,4,'20161224');
-insert into dbo.Deposito_Cuenta values (5,897726,5,'20190113');
+insert into dbo.Deposito_Cuenta values (1,667788,1,'2019-07-23');
+insert into dbo.Deposito_Cuenta values (2,327195,2,'2019-07-23');
+insert into dbo.Deposito_Cuenta values (3,167284,3,'2019-07-23');
+insert into dbo.Deposito_Cuenta values (4,102871,4,'2019-07-23');
+insert into dbo.Deposito_Cuenta values (5,897726,5,'2019-07-23');
 
 go
 
-insert into dbo.Domicilio values (1,'El concretero','01798','','','','',1,'19800501',1,'San Jose de la Construcción','Cordillera','2019-07-23','2019-07-23');
-insert into dbo.Domicilio values (2,'Avenida Ejercito Libertador','215','C','33','','',1,'19720422',1,'Los Alerces','Santiago Centro','2019-07-23','2019-07-23');
-insert into dbo.Domicilio values (3,'Bron Sur','2520','','77B','','',1,'20141117',51,'Santa Julia','Frente al consultorio','2019-07-23','2019-07-23');
-insert into dbo.Domicilio values (4,'Callejon Capturi','77193','','','','',1,'19720422',9,'Peninsula de fuego','A un costado del estadio municipal','2019-07-23','2019-07-23');
-insert into dbo.Domicilio values (5,'Travesia Baratem','01644','','','','',1,'19720422',40,'Catemito Norte','Cerca del terminal rodoviario','2019-07-23','2019-07-23');
+insert into dbo.Domicilio values ('El concretero','01798','','','','',1,'2019-07-23',1,'San Jose de la Construcción','Cordillera','2019-07-23','2019-07-23');
+insert into dbo.Domicilio values ('Avenida Ejercito Libertador','215','C','33','','',1,'2019-07-23',1,'Los Alerces','Santiago Centro','2019-07-23','2019-07-23');
+insert into dbo.Domicilio values ('Bron Sur','2520','','77B','','',1,'2019-07-23',51,'Santa Julia','Frente al consultorio','2019-07-23','2019-07-23');
+insert into dbo.Domicilio values ('Callejon Capturi','77193','','','','',1,'2019-07-23',9,'Peninsula de fuego','A un costado del estadio municipal','2019-07-23','2019-07-23');
+insert into dbo.Domicilio values ('Travesia Baratem','01644','','','','',1,'2019-07-23',40,'Catemito Norte','Cerca del terminal rodoviario','2019-07-23','2019-07-23');
 
 go
 
@@ -238,68 +236,16 @@ insert into Vivienda values (5,'Casa Milán',2100,1,2,219684886,5);
 
 go
 
-insert into Postulante_Conyuge values (94737419,105432881,'20190401',1,1);
-insert into Postulante_Conyuge values (155106514,117236125,'20190415',1,2);
-insert into Postulante_Conyuge values (167746322,139943317,'20190522',1,3);
-insert into Postulante_Conyuge values (171302838,171487965,'20190413',1,4);
-insert into Postulante_Conyuge values (222872707,208334721,'20190501',1,5);
+--TABLA PARAMETRICA
+insert into Estado_Civil values (1,'Soltero',60);
+insert into Estado_Civil values (2,'Casado',100);
+insert into Estado_Civil values (3,'Viudo',20);
+insert into Estado_Civil values (4,'Conviviente Civil',80);
+insert into Estado_Civil values (5,'Divorciado',40);
 
 go
 
-insert into Postulante_Carga values (167746322,192239378,1,1,'2019-07-23','2019-07-23');
-insert into Postulante_Carga values (155106514,206683183,1,2,'2019-07-23','2019-07-23');
-insert into Postulante_Carga values (171302838,208956723,1,3,'2019-07-23','2019-07-23');
-insert into Postulante_Carga values (94737419,240224932,1,4,'2019-07-23','2019-07-23');
-insert into Postulante_Carga values (222872707,265803175,1,1,'2019-07-23','2019-07-23');
-
-go
-
-insert into dbo.informe_tecnico values (8081,'20190401','20190411',8081,1,55461066);
-insert into dbo.informe_tecnico values (8082,'20190415','20190425',8082,2,105395949);
-insert into dbo.informe_tecnico values (8083,'20190522','20190602',8083,3,148956723);
-insert into dbo.informe_tecnico values (8084,'20190413','20190423',8084,4,206595302);
-insert into dbo.informe_tecnico values (8085,'20190501','20190511',8085,5,210276580);
-
-go
-
-insert into Formulario_A values (8081,'20190401','Ernesto Perez',167746322,1);
-insert into Formulario_A values (8082,'20190415','Ernesto Perez',155106514,2);
-insert into Formulario_A values (8083,'20190522','Fabiola Tapia',171302838,3);
-insert into Formulario_A values (8084,'20190413','Ernesto Perez',94737419,4);
-insert into Formulario_A values (8085,'20190501','Ernesto Perez',222872707,5);
-
-go
-
-insert into Postulante values (167746322,'Jose','Miguel','Viñuela','Moreno',2557036,91234567,91234567,0140000,'walter.white@gmail.com','19850701',1,2,102871,1,1350000,8,2,1,'2019-07-23','2019-07-23');
-insert into Postulante values (155106514,'Romina','Alejandra','Jara','Romero',2557127,92569871,920897451,8320000,'romina.jara@gmail.com','19911121',2,5,167284,2,1750000,2,5,2,'2019-07-23','2019-07-23');
-insert into Postulante values (171302838,'Francisco','Orlando','Bernales','Ortiz',26567762,982634572,983266942,8320000,'francisco.bernales@gmail.com','19850701',1,4,221476,3,2100000,2,1,1,'2019-07-23','2019-07-23');
-insert into Postulante values (94737419,'Nicole','Andrea','Mardones','Quilodran',26567763,982547612,921456172,2340000,'nicole.mardones@gmail.com','19911121',2,3,327195,4,1999000,2,4,1,'2019-07-23','2019-07-23');
-insert into Postulante values (222872707,'Claudio','Andres','Sandoval','Matus',26567766,963415782,993628876,4030000,'claudio.sandoval@gmail.com','19850701',1,1,897726,5,1192540,4,6,1,'2019-07-23','2019-07-23');
-
-
---Mantenedores de puntajes
-go
-
-insert into Tramo_Edad values (1,18,29,200);
-insert into Tramo_Edad values (2,30,39,150);
-insert into Tramo_Edad values (3,40,50,100);
-
-go
-
-insert into Tramo_Carga_Familiar values (1,5,11,200);
-insert into Tramo_Carga_Familiar values (2,2,4,100);
-insert into Tramo_Carga_Familiar values (3,0,1,50);
-
-go
-
-insert into dbo.[Estado_Civil] values (1,'Soltero',60);
-insert into dbo.[Estado_Civil] values (2,'Casado',100);
-insert into dbo.[Estado_Civil] values (3,'Viudo',20);
-insert into dbo.[Estado_Civil] values (4,'Conviviente Civil',80);
-insert into dbo.[Estado_Civil] values (5,'Divorciado',40);
-
-go
-
+--TABLA PARAMETRICA
 insert into tipo_titulo values (1,'Título Profesional',200);
 insert into tipo_titulo values (2,'Título Técnico',100);
 insert into tipo_titulo values (3,'Sin titulo',0);
@@ -315,6 +261,61 @@ insert into Titulo values (6,'Ingeniero en redes y telecomunicaciones',1,1);
 
 go
 
+insert into Postulante values (169199957,'Carlos','Alberto','Ortiz','Mardones',2557036,91234567,91234567,0140000,'cortizmardones@gmail.com','1988-03-22',32,1,2,102871,1,1350000,8,2,1,'2019-07-23','2019-07-23');
+insert into Postulante values (155106514,'Romina','Alejandra','Jara','Romero',2557127,92569871,920897451,8320000,'romina.jara@gmail.com','1988-03-22',40,2,5,167284,2,1750000,2,5,2,'2019-07-23','2019-07-23');
+insert into Postulante values (171302838,'Francisco','Orlando','Bernales','Ortiz',26567762,982634572,983266942,8320000,'francisco.bernales@gmail.com','1988-03-22',55,1,4,327195,3,2100000,2,1,1,'2019-07-23','2019-07-23');
+insert into Postulante values (94737419,'Nicole','Andrea','Mardones','Quilodran',26567763,982547612,921456172,2340000,'nicole.mardones@gmail.com','1988-03-22',29,2,3,667788,4,1999000,2,4,1,'2019-07-23','2019-07-23');
+insert into Postulante values (222872707,'Claudio','Andres','Sandoval','Matus',26567766,963415782,993628876,4030000,'claudio.sandoval@gmail.com','1988-03-22',19,1,1,897726,5,1192540,4,6,1,'2019-07-23','2019-07-23');
+
+go
+
+insert into Postulante_Conyuge values (169199957,105432881,'20190401',1,1);
+insert into Postulante_Conyuge values (155106514,117236125,'20190415',1,2);
+insert into Postulante_Conyuge values (171302838,139943317,'20190522',1,3);
+insert into Postulante_Conyuge values (94737419,171487965,'20190413',1,4);
+insert into Postulante_Conyuge values (222872707,208334721,'20190501',1,5);
+
+go
+
+insert into Postulante_Carga values (169199957,192239378,1,1,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (155106514,206683183,1,2,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (171302838,208956723,1,3,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (94737419,240224932,1,4,'2019-07-23','2019-07-23');
+insert into Postulante_Carga values (222872707,265803175,1,1,'2019-07-23','2019-07-23');
+
+go
+
+insert into Formulario_A values (8081,'2019-07-23','Ernesto Perez',169199957,1);
+insert into Formulario_A values (8082,'2019-07-23','Ernesto Perez',155106514,2);
+insert into Formulario_A values (8083,'2019-07-23','Fabiola Tapia',171302838,3);
+insert into Formulario_A values (8084,'2019-07-23','Ernesto Perez',94737419,4);
+insert into Formulario_A values (8085,'2019-07-23','Ernesto Perez',222872707,5);
+
+go
+
+insert into Informe_Tecnico values (8081,'2019-07-23','2019-07-23',8081,1,55461066);
+insert into Informe_Tecnico values (8082,'2019-07-23','2019-07-23',8082,2,105395949);
+insert into Informe_Tecnico values (8083,'2019-07-23','2019-07-23',8083,3,148956723);
+insert into Informe_Tecnico values (8084,'2019-07-23','2019-07-23',8084,4,206595302);
+insert into Informe_Tecnico values (8085,'2019-07-23','2019-07-23',8085,5,210276580);
+
+go
+
+--TABLA PARAMETRICA
+insert into Tramo_Edad values (1,18,29,200);
+insert into Tramo_Edad values (2,30,39,150);
+insert into Tramo_Edad values (3,40,50,100);
+
+go
+
+--TABLA PARAMETRICA
+insert into Tramo_Carga_Familiar values (1,5,11,200);
+insert into Tramo_Carga_Familiar values (2,2,4,100);
+insert into Tramo_Carga_Familiar values (3,0,1,50);
+
+go
+
+--TABLA PARAMETRICA
 insert into Tramo_Ahorro values(1,10000000,99000000,500);
 insert into Tramo_Ahorro values(2,9000000,9999999,400);
 insert into Tramo_Ahorro values(3,8000000,8999999,200);
@@ -324,3 +325,5 @@ go
 insert into error values(1,'El Rut ingresado ya existe en la BDD');
 insert into error values(2,'La cuenta bancaria ya existe en la BDD');
 insert into error values(3,'El rut consultado no se encuentra en la BDD');
+
+--SCRIPT BIEN HECHO , RESPETANDO INTEGRIDAD REFERENCIAL A LA HORA DE SER CARGADO (32 TABLAS HASTA EL MOMENTO)

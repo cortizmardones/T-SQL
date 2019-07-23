@@ -18,4 +18,3 @@ select * from Postulante_Carga;
 
 select * from Carga;
 
-select * from relacion_carga;
